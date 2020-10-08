@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lsd.app.test.mapper.test.Test1MySQLMapper">
+
+    <select id="queryDataTest" resultType="com.lsd.app.test.pojo.Employees">
+        select  *  from employees order by hire_date desc
+    </select>
+
+    <select id="queryDataTest2" resultType="java.util.Date">
+        select curdate();
+    </select>
+</mapper>

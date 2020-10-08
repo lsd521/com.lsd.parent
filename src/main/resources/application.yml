@@ -1,8 +1,32 @@
+#spring:
+#  thymeleaf:
+#    prefix: classpath:/templates/pages/
+#    suffix: .jsp
+#    encoding: UTF-8
+#    servlet:
+#      content-type: text/html
+#    cache: false
+
 spring:
-  thymeleaf:
-    prefix: classpath:/templates/pages/
-    suffix: .jsp
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
-    cache: false
+  mvc:
+    view:
+      prefix: classpath:/templates/pages/
+      suffix: .jsp
+
+  #引入 Mybatis 数据源    GMT%2B8表示为北京时区是东八区
+  #com.lsd.com.mysql.cj.jdbc.Driver是mysql8以后的新驱动
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/practice1?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#增加MyBatis配置信息   **任意多级目录
+#mapper-locations扫描mapper.xml的    type-aliases-package扫描 test11 类
+mybatis:
+  mapper-locations: classpath*:com/lsd/app/mapper/**/*Mapper.xml
+  type-aliases-package: com.lsd.com.lsd.com.lsd.com.**.mapper.**
+
+# 定义项目的端口号
+server:
+  port: 8088

@@ -15,8 +15,15 @@
 	<name>com.lsd.parent</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!--版本号控制-->
 	<properties>
 		<java.version>1.8</java.version>
+		<javax.servlet-api>3.1.0</javax.servlet-api>
+		<jsp-api>2.2</jsp-api>
+		<jstl>1.2</jstl>
+		<mybatis-spring-boot-starter>2.0.1</mybatis-spring-boot-starter>
+		<mysql-connector-java>8.0.19</mysql-connector-java>
+		<javax.persistence>2.2.0</javax.persistence>
 	</properties>
 
 	<dependencies>
@@ -25,10 +32,10 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,6 +57,53 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<!--引入Servlet开始-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api}</version>
+		</dependency>
+		<!--引入Servlet结束-->
+		<!--引入jsp相关开始-->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api}</version>
+		</dependency>
+		<!--引入jsp相关结束-->
+
+		<!--引入JSTL开始-->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 引入Mybatis  -begin -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot-starter}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java}</version>
+		</dependency>
+		<!-- 引入Mybatis  -end -->
+
+		<!--实体类注解-->
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>${javax.persistence}</version>
 		</dependency>
 	</dependencies>
 
