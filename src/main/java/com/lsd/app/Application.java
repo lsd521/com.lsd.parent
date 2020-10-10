@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 
-@MapperScan({"com.lsd.app.test.*.mapper","com.lsd.app.*.mapper.test"})
+@MapperScan({"com.lsd.app.*.mapper","com.lsd.app.mapper.*"})
 @SpringBootApplication
 public class Application {
 

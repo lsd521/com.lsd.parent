@@ -24,6 +24,9 @@
 		<mybatis-spring-boot-starter>2.0.1</mybatis-spring-boot-starter>
 		<mysql-connector-java>8.0.19</mysql-connector-java>
 		<javax.persistence>2.2.0</javax.persistence>
+		<spring-boot-starter-logging>2.3.1.RELEASE</spring-boot-starter-logging>
+		<com.google.gson>2.2.1</com.google.gson>
+		<com.alibaba.fastjson>1.2.73</com.alibaba.fastjson>
 	</properties>
 
 	<dependencies>
@@ -104,6 +107,25 @@
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>javax.persistence</artifactId>
 			<version>${javax.persistence}</version>
+		</dependency>
+
+		<!--日志-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+			<version>${spring-boot-starter-logging}</version>
+		</dependency>
+
+		<!--JSONObject-->
+		<dependency>
+			<groupId>com.google.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${com.alibaba.fastjson}</version>
 		</dependency>
 	</dependencies>
 

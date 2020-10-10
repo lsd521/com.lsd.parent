@@ -2,16 +2,21 @@ package com.lsd.app.test.pojo;
 
 import org.springframework.stereotype.Component;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * @Author Liu ShaoDong
  * @Date 2020/9/29 13:44
+ * @Entity：@Table(name=”“)：表明这是一个实体类。一般用于jpa这两个注解一般一块使用，但是如果表名和实体类名相同的话，@Table可以省略
  */
 @Entity
-@Component
 public class Employees {
-    /**员工号*/
+    /**员工号
+     * @Id 为主键
+     * @Column：如果字段名与列名相同，则可以省略。*/
+    @Id
     private String empNo;
     /**生日 yyyy-MM-dd*/
     private String birthDate;

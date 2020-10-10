@@ -1,4 +1,4 @@
-package com.lsd.app.test.mapper.test;
+package com.lsd.app.test.mapper;
 
 import com.lsd.app.test.pojo.Employees;
 import org.apache.ibatis.annotations.Mapper;
